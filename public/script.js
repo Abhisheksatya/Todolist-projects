@@ -2,6 +2,41 @@ var result = (function (){
    data= gettodos()
 }());
 
+async function tasksort(){
+    const resp = await fetch('/todos', { method: 'GET'})
+    let todos = await resp.json()
+    todos.sort((a,b)=>
+    a.task.localeCompare(b.task)
+    );
+    view(todos);  
+}
+async function descsort(){
+    const resp = await fetch('/todos', { method: 'GET'})
+    let todos = await resp.json()
+    todos.sort((a,b)=>
+    a.Description.localeCompare(b.Description)
+    );
+    view(todos);   
+}
+async function priosort(){
+    console.log("enter")
+
+    const resp = await fetch('/todos', { method: 'GET'})
+    let todos = await resp.json()
+    todos.sort((a,b)=>
+    a.Priority.localeCompare(b.Priority)
+    );
+    console.log("pri")
+    view(todos);   
+}
+async function datesort(){
+    const resp = await fetch('/todos', { method: 'GET'})
+    let todos = await resp.json()
+    todos.sort((a,b)=>
+    new Date(a.date).getTime() - new Date(b.date).getTime()
+    );
+    view(todos);   
+}
 async function gettodos(){
     const resp = await fetch('/todos', { method: 'GET'})
     let todos = await resp.json()

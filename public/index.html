@@ -35,7 +35,11 @@
     <button type="reset" name="submit" class="btn btn-danger btn-lg" id="reset"  value="form">Reset</button>
     </div><br></form><hr>
     <button type="submit"  class="btn btn-warning btn-lg " id="submit" onclick="cleantodos();">Cleanup</button>
-    <button type="submit" name="submit" class="btn btn-primary btn-lg" id="submit"> Sort </button>
+    <button type="submit" name="submit" class="btn btn-primary btn-lg"  onclick="gettodos();">Sort by Status </button>
+    <button type="submit" name="submit" class="btn btn-primary btn-lg"  onclick="tasksort();">Sort by task </button>
+    <button type="submit" name="submit" class="btn btn-primary btn-lg"  onclick="descsort();">Sort by Description</button>
+    <button type="submit" name="submit" class="btn btn-primary btn-lg"  onclick="priosort();">Sort by Priority</button>
+    <button type="submit" name="submit" class="btn btn-primary btn-lg"  onclick="datesort();">Sort by Date</button>
    <br><br>
     <table id="table" align = "center" border="1px solid black"></table>
 </div>
