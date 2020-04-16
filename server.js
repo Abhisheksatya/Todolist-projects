@@ -88,5 +88,5 @@ app.post('/todoss',async(req,res)=>{
     
     res.status(204).send({success: 'updated'})
 })
-//const sererport= process.env.PORT || 3232
-app.listen(3232)
+const sererport= process.env.PORT || 3232
+app.listen(sererport)
