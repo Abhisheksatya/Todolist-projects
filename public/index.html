@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script async defer src="script.js"></script>
+</head>
+<body >
+    <div>
+    <h1>TODO LIST</h1>
+    
+    <button type="button" class="btn btn-info btn-lg" data-toggle="collapse" data-target="#demo">Add Task</button>
+    <div id="demo" class="collapse">
+    <div class="form-group row">
+        <div class="col-xs-6"><form id="myform">
+    <b>Title</b> <input type="text" name="task" class="form-control" id="task" required>
+    <b>Description</b><input type="text" name="Description" class="form-control" id="Description">
+    <b>Due Date</b><input type="date" class="form-control" id="date">
+        <label for="Notes"><b>Notes:</b></label>
+        <textarea class="form-control" rows="5" id="Notes" ></textarea><br>
+        <b>Priority </b><select id="Priority" class="btn btn-primary dropdown-toggle">
+            <option value="Low">Low</option>
+            <option value="Medium" selected>Medium</option>
+            <option value="High">High</option>
+          </select>
+      </div></div>
+    <button type="submit" class="btn btn-success btn-lg" name="submit" id="Add" onclick="addmethod();">Add</button>
+    <button type="reset" name="submit" class="btn btn-danger btn-lg" id="reset"  value="form">Reset</button>
+    </div><br></form><hr>
+    <button type="submit"  class="btn btn-warning btn-lg " id="submit" onclick="cleantodos();">Cleanup</button>
+    <button type="submit" name="submit" class="btn btn-primary btn-lg" id="submit"> Sort </button>
+   <br><br>
+    <table id="table" align = "center" border="1px solid black"></table>
+</div>
+</body>
+</html>
